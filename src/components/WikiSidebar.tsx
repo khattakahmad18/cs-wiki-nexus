@@ -1,37 +1,30 @@
-import { ChevronRight } from "lucide-react";
+import { Shuffle } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { getRandomArticle, articles } from "@/data/articles";
+import { Button } from "@/components/ui/button";
 
 const WikiSidebar = () => {
+  const navigate = useNavigate();
+
+  const handleRandomArticle = () => {
+    const randomArticle = getRandomArticle();
+    navigate(`/article/${randomArticle.slug}`);
+  };
+
   const categories = [
     {
       title: "Computer Science Topics",
       items: [
-        "Algorithms",
-        "Data Structures",
-        "Artificial Intelligence",
-        "Machine Learning",
-        "Computer Networks",
-        "Operating Systems",
+        { name: "Artificial Intelligence", slug: "artificial-intelligence" },
+        { name: "Machine Learning", slug: "machine-learning" },
+        { name: "Neural Networks", slug: "neural-networks" },
       ],
     },
     {
       title: "Emerging Technologies",
       items: [
-        "Quantum Computing",
-        "Edge Computing",
-        "Blockchain",
-        "Web3",
-        "Neural Networks",
-        "Autonomous Systems",
-      ],
-    },
-    {
-      title: "Research Areas",
-      items: [
-        "Computer Vision",
-        "Natural Language Processing",
-        "Cryptography",
-        "Distributed Systems",
-        "Human-Computer Interaction",
+        { name: "Quantum Computing", slug: "quantum-computing" },
+        { name: "Blockchain", slug: "blockchain" },
       ],
     },
   ];
@@ -45,24 +38,23 @@ const WikiSidebar = () => {
           </h3>
           <ul className="space-y-1 text-sm">
             <li>
-              <a href="/" className="block py-1 hover:underline">
+              <Link to="/" className="block py-1 hover:underline">
                 Main page
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="block py-1 hover:underline">
-                Contents
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block py-1 hover:underline">
-                Featured content
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block py-1 hover:underline">
+              <button
+                onClick={handleRandomArticle}
+                className="flex items-center gap-2 py-1 hover:underline text-left w-full"
+              >
+                <Shuffle className="h-3 w-3" />
                 Random article
-              </a>
+              </button>
+            </li>
+            <li>
+              <Link to="/recent-changes" className="block py-1 hover:underline">
+                Recent changes
+              </Link>
             </li>
           </ul>
         </div>
@@ -74,15 +66,30 @@ const WikiSidebar = () => {
             </h3>
             <ul className="space-y-1 text-sm">
               {category.items.map((item) => (
-                <li key={item}>
-                  <a href="#" className="block py-1 hover:underline">
-                    {item}
-                  </a>
+                <li key={item.slug}>
+                  <Link to={`/article/${item.slug}`} className="block py-1 hover:underline">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
         ))}
+
+        <div>
+          <h3 className="font-sans text-sm font-semibold mb-2 border-none pb-0 mt-0">
+            All Articles ({articles.length})
+          </h3>
+          <ul className="space-y-1 text-sm">
+            {articles.map((article) => (
+              <li key={article.slug}>
+                <Link to={`/article/${article.slug}`} className="block py-1 hover:underline">
+                  {article.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </aside>
   );
