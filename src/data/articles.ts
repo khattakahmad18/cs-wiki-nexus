@@ -79,8 +79,8 @@ export const articles: Article[] = [
       ]
     },
     categories: ["Quantum computing", "Emerging technologies", "Computer science", "Physics"],
-    relatedArticles: ["machine-learning", "artificial-intelligence", "cryptography"],
-    lastEdited: "2024-01-15",
+    relatedArticles: ["machine-learning", "artificial-intelligence", "algorithms"],
+    lastEdited: "2024-11-05",
     references: [
       "Nielsen, Michael A.; Chuang, Isaac L. (2010). Quantum Computation and Quantum Information. Cambridge University Press.",
       "Preskill, John (2018). Quantum Computing in the NISQ era and beyond. Quantum. 2: 79.",
@@ -145,7 +145,7 @@ export const articles: Article[] = [
     },
     categories: ["Artificial intelligence", "Computer science", "Machine learning", "Emerging technologies"],
     relatedArticles: ["machine-learning", "neural-networks", "quantum-computing"],
-    lastEdited: "2024-01-18",
+    lastEdited: "2024-11-03",
     references: [
       "Russell, Stuart J.; Norvig, Peter (2020). Artificial Intelligence: A Modern Approach. Pearson.",
       "Goodfellow, Ian; Bengio, Yoshua; Courville, Aaron (2016). Deep Learning. MIT Press.",
@@ -208,8 +208,8 @@ export const articles: Article[] = [
       ]
     },
     categories: ["Machine learning", "Artificial intelligence", "Data science", "Computer science"],
-    relatedArticles: ["artificial-intelligence", "neural-networks", "deep-learning"],
-    lastEdited: "2024-01-20",
+    relatedArticles: ["artificial-intelligence", "neural-networks", "algorithms"],
+    lastEdited: "2024-10-28",
     references: [
       "Bishop, Christopher M. (2006). Pattern Recognition and Machine Learning. Springer.",
       "Murphy, Kevin P. (2012). Machine Learning: A Probabilistic Perspective. MIT Press.",
@@ -272,8 +272,8 @@ export const articles: Article[] = [
       ]
     },
     categories: ["Blockchain", "Distributed systems", "Cryptography", "Emerging technologies"],
-    relatedArticles: ["cryptography", "distributed-systems", "web3"],
-    lastEdited: "2024-01-22",
+    relatedArticles: ["computer-networks", "algorithms", "database-systems"],
+    lastEdited: "2024-10-15",
     references: [
       "Nakamoto, Satoshi (2008). Bitcoin: A Peer-to-Peer Electronic Cash System.",
       "Narayanan, Arvind; et al. (2016). Bitcoin and Cryptocurrency Technologies. Princeton University Press.",
@@ -336,12 +336,390 @@ export const articles: Article[] = [
       ]
     },
     categories: ["Neural networks", "Machine learning", "Artificial intelligence", "Deep learning"],
-    relatedArticles: ["machine-learning", "artificial-intelligence", "deep-learning"],
-    lastEdited: "2024-01-25",
+    relatedArticles: ["machine-learning", "artificial-intelligence", "algorithms"],
+    lastEdited: "2024-10-22",
     references: [
       "Goodfellow, Ian; Bengio, Yoshua; Courville, Aaron (2016). Deep Learning. MIT Press.",
       "Haykin, Simon (2009). Neural Networks and Learning Machines. Pearson.",
       "Nielsen, Michael (2015). Neural Networks and Deep Learning. Determination Press."
+    ]
+  },
+  {
+    id: "6",
+    slug: "algorithms",
+    title: "Algorithms",
+    summary: "An algorithm is a finite sequence of rigorous instructions used to solve a class of specific problems or perform a computation.",
+    content: {
+      overview: [
+        "An algorithm is a procedure used for solving a problem or performing a computation. Algorithms act as an exact list of instructions that conduct specified actions step by step in either hardware- or software-based routines.",
+        "Algorithms are fundamental to the way computers process data. Many computer programs contain algorithms that detail the specific instructions a computer should perform to carry out a specified task."
+      ],
+      sections: [
+        {
+          title: "Characteristics",
+          id: "characteristics",
+          content: [
+            "An algorithm must have the following characteristics:"
+          ],
+          subsections: [
+            {
+              title: "Finiteness",
+              content: ["An algorithm must always terminate after a finite number of steps."]
+            },
+            {
+              title: "Definiteness",
+              content: ["Each step of an algorithm must be precisely defined; the actions to be carried out must be rigorously and unambiguously specified."]
+            },
+            {
+              title: "Input",
+              content: ["An algorithm has zero or more inputs, taken from a specified set of objects."]
+            },
+            {
+              title: "Output",
+              content: ["An algorithm has one or more outputs, which have a specified relation to the inputs."]
+            },
+            {
+              title: "Effectiveness",
+              content: ["All operations to be performed must be sufficiently basic that they can be done exactly and in finite time."]
+            }
+          ]
+        },
+        {
+          title: "Algorithm Analysis",
+          id: "analysis",
+          content: [
+            "Algorithm analysis is the determination of the computational complexity of algorithms, that is the amount of time, storage and/or other resources necessary to execute them. Usually, this involves determining a function that relates the length of an algorithm's input to the number of steps it takes (its time complexity) or the number of storage locations it uses (its space complexity)."
+          ]
+        },
+        {
+          title: "Common Algorithms",
+          id: "common",
+          content: [
+            "Important algorithms include sorting algorithms (quicksort, mergesort, heapsort), searching algorithms (binary search, depth-first search, breadth-first search), graph algorithms (Dijkstra's algorithm, Floyd-Warshall algorithm), and dynamic programming algorithms."
+          ]
+        },
+        {
+          title: "Complexity Classes",
+          id: "complexity",
+          content: [
+            "Algorithms are classified by their computational complexity. Common complexity classes include O(1) for constant time, O(log n) for logarithmic time, O(n) for linear time, O(n log n) for linearithmic time, O(n²) for quadratic time, and O(2ⁿ) for exponential time."
+          ]
+        }
+      ]
+    },
+    categories: ["Algorithms", "Computer science", "Data structures", "Computational complexity"],
+    relatedArticles: ["data-structures", "machine-learning", "quantum-computing"],
+    lastEdited: "2024-11-01",
+    references: [
+      "Knuth, Donald E. (1997). The Art of Computer Programming, Volumes 1-4A. Addison-Wesley.",
+      "Cormen, Thomas H.; et al. (2009). Introduction to Algorithms, Third Edition. MIT Press.",
+      "Sedgewick, Robert; Wayne, Kevin (2011). Algorithms, 4th Edition. Addison-Wesley."
+    ]
+  },
+  {
+    id: "7",
+    slug: "data-structures",
+    title: "Data Structures",
+    summary: "A data structure is a specialized format for organizing, processing, retrieving and storing data efficiently.",
+    content: {
+      overview: [
+        "A data structure is a particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.",
+        "Different kinds of data structures are suited to different kinds of applications, and some are highly specialized to specific tasks."
+      ],
+      sections: [
+        {
+          title: "Types of Data Structures",
+          id: "types",
+          content: [
+            "Data structures can be classified into two categories:"
+          ],
+          subsections: [
+            {
+              title: "Linear Data Structures",
+              content: ["Elements are arranged in a sequential manner. Examples include arrays, linked lists, stacks, and queues."]
+            },
+            {
+              title: "Non-Linear Data Structures",
+              content: ["Elements are arranged in a hierarchical manner. Examples include trees, graphs, and heaps."]
+            }
+          ]
+        },
+        {
+          title: "Common Data Structures",
+          id: "common",
+          content: [
+            "Fundamental data structures include arrays (fixed-size collections), linked lists (dynamically sized sequences), stacks (LIFO - Last In First Out), queues (FIFO - First In First Out), trees (hierarchical structures), graphs (networks of nodes), hash tables (key-value mappings), and heaps (priority queues)."
+          ]
+        },
+        {
+          title: "Abstract Data Types",
+          id: "adt",
+          content: [
+            "An abstract data type (ADT) is a mathematical model for data types, defined by its behavior from the point of view of a user of the data. An ADT is defined only by the operations that may be performed on it and not by its implementation. Common ADTs include lists, stacks, queues, sets, and maps."
+          ]
+        },
+        {
+          title: "Time and Space Complexity",
+          id: "complexity",
+          content: [
+            "Each data structure has strengths and weaknesses in terms of time complexity for operations like insertion, deletion, and search, as well as space complexity. Choosing the right data structure depends on the specific requirements of the application."
+          ]
+        }
+      ]
+    },
+    categories: ["Data structures", "Computer science", "Algorithms", "Programming"],
+    relatedArticles: ["algorithms", "database-systems", "operating-systems"],
+    lastEdited: "2024-10-29",
+    references: [
+      "Cormen, Thomas H.; et al. (2009). Introduction to Algorithms, Third Edition. MIT Press.",
+      "Weiss, Mark Allen (2011). Data Structures and Algorithm Analysis in C++, Fourth Edition. Pearson.",
+      "Goodrich, Michael T.; Tamassia, Roberto (2013). Data Structures and Algorithms in Java, Sixth Edition. Wiley."
+    ]
+  },
+  {
+    id: "8",
+    slug: "computer-networks",
+    title: "Computer Networks",
+    summary: "A computer network is a set of computers sharing resources located on or provided by network nodes.",
+    content: {
+      overview: [
+        "A computer network is a telecommunications network which allows computers to exchange data. In computer networks, networked computing devices exchange data with each other using a data link. The connections between nodes are established using either cable media or wireless media.",
+        "The best-known computer network is the Internet. Computer networks support applications such as access to the World Wide Web, shared use of application and storage servers, printers, and use of email and instant messaging applications."
+      ],
+      sections: [
+        {
+          title: "Network Architecture",
+          id: "architecture",
+          content: [
+            "Network architecture refers to the way network devices and services are structured to serve the connectivity needs of client devices. Network devices include hubs, switches, routers, and firewalls."
+          ]
+        },
+        {
+          title: "OSI Model",
+          id: "osi",
+          content: [
+            "The Open Systems Interconnection (OSI) model is a conceptual framework used to describe the functions of a networking system. The OSI model consists of seven layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application. Each layer serves a specific function and communicates with the layers directly above and below it."
+          ]
+        },
+        {
+          title: "Network Protocols",
+          id: "protocols",
+          content: [
+            "Network protocols are formal standards and policies comprised of rules, procedures and formats that define communication between two or more devices over a network. Key protocols include TCP/IP (Transmission Control Protocol/Internet Protocol), HTTP/HTTPS (Hypertext Transfer Protocol), FTP (File Transfer Protocol), and DNS (Domain Name System)."
+          ]
+        },
+        {
+          title: "Network Security",
+          id: "security",
+          content: [
+            "Network security involves the policies and practices adopted to prevent and monitor unauthorized access, misuse, modification, or denial of a computer network and network-accessible resources. Security measures include firewalls, encryption, intrusion detection systems, and virtual private networks (VPNs)."
+          ]
+        }
+      ]
+    },
+    categories: ["Computer networks", "Computer science", "Telecommunications", "Internet"],
+    relatedArticles: ["operating-systems", "cloud-computing", "blockchain"],
+    lastEdited: "2024-10-18",
+    references: [
+      "Tanenbaum, Andrew S.; Wetherall, David J. (2011). Computer Networks, Fifth Edition. Pearson.",
+      "Kurose, James F.; Ross, Keith W. (2017). Computer Networking: A Top-Down Approach, Seventh Edition. Pearson.",
+      "Peterson, Larry L.; Davie, Bruce S. (2011). Computer Networks: A Systems Approach, Fifth Edition. Morgan Kaufmann."
+    ]
+  },
+  {
+    id: "9",
+    slug: "operating-systems",
+    title: "Operating Systems",
+    summary: "An operating system is system software that manages computer hardware and software resources and provides common services for computer programs.",
+    content: {
+      overview: [
+        "An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs. For hardware functions such as input and output and memory allocation, the operating system acts as an intermediary between programs and the computer hardware.",
+        "Operating systems are found on many devices that contain a computer, from cellular phones and video game consoles to web servers and supercomputers."
+      ],
+      sections: [
+        {
+          title: "Core Functions",
+          id: "functions",
+          content: [
+            "The operating system performs several essential functions:"
+          ],
+          subsections: [
+            {
+              title: "Process Management",
+              content: ["Handles the creation, scheduling, and termination of processes. Manages multitasking by allocating CPU time to different processes."]
+            },
+            {
+              title: "Memory Management",
+              content: ["Manages the allocation and deallocation of memory space as needed by programs. Implements virtual memory to provide larger address spaces than physical RAM."]
+            },
+            {
+              title: "File System Management",
+              content: ["Organizes and controls how data is stored and retrieved. Manages files and directories on storage devices."]
+            },
+            {
+              title: "Device Management",
+              content: ["Manages device communication via their respective drivers. Coordinates I/O operations between hardware devices and applications."]
+            }
+          ]
+        },
+        {
+          title: "Types of Operating Systems",
+          id: "types",
+          content: [
+            "Operating systems can be classified into several types including single-user single-task (MS-DOS), single-user multi-task (Windows, macOS), multi-user (Unix, Linux), real-time (RTOS for embedded systems), distributed (cloud computing environments), and mobile (Android, iOS)."
+          ]
+        },
+        {
+          title: "Kernel",
+          id: "kernel",
+          content: [
+            "The kernel is the core component of an operating system. It has complete control over everything in the system and is responsible for facilitating interactions between hardware and software components. There are different kernel architectures including monolithic kernels, microkernels, and hybrid kernels."
+          ]
+        },
+        {
+          title: "Concurrency and Synchronization",
+          id: "concurrency",
+          content: [
+            "Modern operating systems must handle concurrent execution of multiple processes and threads. This requires synchronization mechanisms such as semaphores, mutexes, and monitors to prevent race conditions and ensure data consistency."
+          ]
+        }
+      ]
+    },
+    categories: ["Operating systems", "Computer science", "System software", "Computer architecture"],
+    relatedArticles: ["computer-networks", "data-structures", "cloud-computing"],
+    lastEdited: "2024-10-25",
+    references: [
+      "Silberschatz, Abraham; Galvin, Peter B.; Gagne, Greg (2018). Operating System Concepts, Tenth Edition. Wiley.",
+      "Tanenbaum, Andrew S.; Bos, Herbert (2014). Modern Operating Systems, Fourth Edition. Pearson.",
+      "Stallings, William (2017). Operating Systems: Internals and Design Principles, Ninth Edition. Pearson."
+    ]
+  },
+  {
+    id: "10",
+    slug: "database-systems",
+    title: "Database Systems",
+    summary: "A database is an organized collection of structured information, or data, typically stored electronically in a computer system.",
+    content: {
+      overview: [
+        "A database is an organized collection of data stored and accessed electronically. Databases are managed by Database Management Systems (DBMS), which are software systems that allow users to define, create, maintain, and control access to the database.",
+        "Modern databases are designed to handle large amounts of information efficiently and reliably, providing mechanisms for data integrity, security, and concurrent access."
+      ],
+      sections: [
+        {
+          title: "Database Models",
+          id: "models",
+          content: [
+            "Several database models have been developed over time:"
+          ],
+          subsections: [
+            {
+              title: "Relational Databases",
+              content: ["Organize data into tables with rows and columns. Use SQL (Structured Query Language) for data manipulation. Examples include MySQL, PostgreSQL, Oracle, and SQL Server."]
+            },
+            {
+              title: "NoSQL Databases",
+              content: ["Designed for specific data models and have flexible schemas. Types include document databases (MongoDB), key-value stores (Redis), column-family stores (Cassandra), and graph databases (Neo4j)."]
+            },
+            {
+              title: "NewSQL Databases",
+              content: ["Combine the scalability of NoSQL with the ACID guarantees of traditional relational databases."]
+            }
+          ]
+        },
+        {
+          title: "ACID Properties",
+          id: "acid",
+          content: [
+            "ACID is a set of properties that guarantee reliable processing of database transactions. ACID stands for Atomicity (transactions are all-or-nothing), Consistency (transactions bring the database from one valid state to another), Isolation (concurrent transactions do not interfere), and Durability (committed transactions are permanent)."
+          ]
+        },
+        {
+          title: "Database Normalization",
+          id: "normalization",
+          content: [
+            "Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity. Normal forms (1NF, 2NF, 3NF, BCNF, 4NF, 5NF) represent different levels of normalization, each with specific rules to eliminate various types of anomalies."
+          ]
+        },
+        {
+          title: "Query Optimization",
+          id: "optimization",
+          content: [
+            "Query optimization is the process of selecting the most efficient way to execute a given query. Database systems use query optimizers that analyze multiple execution plans and choose the one with the lowest estimated cost in terms of time and resource usage."
+          ]
+        }
+      ]
+    },
+    categories: ["Database systems", "Computer science", "Data management", "Information systems"],
+    relatedArticles: ["data-structures", "algorithms", "cloud-computing"],
+    lastEdited: "2024-11-02",
+    references: [
+      "Silberschatz, Abraham; Korth, Henry F.; Sudarshan, S. (2019). Database System Concepts, Seventh Edition. McGraw-Hill.",
+      "Elmasri, Ramez; Navathe, Shamkant B. (2015). Fundamentals of Database Systems, Seventh Edition. Pearson.",
+      "Garcia-Molina, Hector; Ullman, Jeffrey D.; Widom, Jennifer (2008). Database Systems: The Complete Book, Second Edition. Pearson."
+    ]
+  },
+  {
+    id: "11",
+    slug: "cloud-computing",
+    title: "Cloud Computing",
+    summary: "Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user.",
+    content: {
+      overview: [
+        "Cloud computing is the delivery of computing services—including servers, storage, databases, networking, software, analytics, and intelligence—over the Internet ('the cloud') to offer faster innovation, flexible resources, and economies of scale.",
+        "Users typically pay only for cloud services they use, helping lower operating costs, run infrastructure more efficiently, and scale as business needs change."
+      ],
+      sections: [
+        {
+          title: "Service Models",
+          id: "models",
+          content: [
+            "Cloud computing services are typically categorized into three service models:"
+          ],
+          subsections: [
+            {
+              title: "Infrastructure as a Service (IaaS)",
+              content: ["Provides virtualized computing resources over the internet. Users rent IT infrastructure (servers, VMs, storage, networks) from a cloud provider. Examples: AWS EC2, Google Compute Engine, Microsoft Azure VMs."]
+            },
+            {
+              title: "Platform as a Service (PaaS)",
+              content: ["Provides a platform allowing customers to develop, run, and manage applications without the complexity of building and maintaining infrastructure. Examples: Google App Engine, Heroku, AWS Elastic Beanstalk."]
+            },
+            {
+              title: "Software as a Service (SaaS)",
+              content: ["Delivers software applications over the internet on a subscription basis. The provider hosts and manages the application. Examples: Google Workspace, Salesforce, Dropbox, Microsoft 365."]
+            }
+          ]
+        },
+        {
+          title: "Deployment Models",
+          id: "deployment",
+          content: [
+            "Cloud deployment models include Public Cloud (services offered over the public internet and available to anyone), Private Cloud (exclusive cloud environment dedicated to a single organization), Hybrid Cloud (combination of public and private clouds), and Multi-Cloud (use of multiple cloud providers)."
+          ]
+        },
+        {
+          title: "Key Technologies",
+          id: "technologies",
+          content: [
+            "Core technologies enabling cloud computing include virtualization (creating virtual versions of physical resources), containerization (lightweight application packaging with Docker and Kubernetes), orchestration (automated configuration and coordination), and distributed computing frameworks."
+          ]
+        },
+        {
+          title: "Security and Compliance",
+          id: "security",
+          content: [
+            "Cloud security involves protecting data, applications, and infrastructure in cloud environments. Key concerns include data privacy, access control, compliance with regulations (GDPR, HIPAA), encryption, and shared responsibility between cloud providers and customers."
+          ]
+        }
+      ]
+    },
+    categories: ["Cloud computing", "Distributed systems", "Computer science", "Internet"],
+    relatedArticles: ["computer-networks", "operating-systems", "database-systems"],
+    lastEdited: "2024-10-20",
+    references: [
+      "Erl, Thomas; et al. (2013). Cloud Computing: Concepts, Technology & Architecture. Prentice Hall.",
+      "Sosinsky, Barrie (2010). Cloud Computing Bible. Wiley.",
+      "Marinescu, Dan C. (2017). Cloud Computing: Theory and Practice, Second Edition. Morgan Kaufmann."
     ]
   }
 ];
