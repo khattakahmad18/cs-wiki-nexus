@@ -424,45 +424,127 @@ export const articles: Article[] = [
     content: {
       overview: [
         "A data structure is a particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.",
-        "Different kinds of data structures are suited to different kinds of applications, and some are highly specialized to specific tasks."
+        "Different kinds of data structures are suited to different kinds of applications, and some are highly specialized to specific tasks. Understanding data structures is fundamental to writing efficient algorithms and building scalable software systems."
       ],
       sections: [
         {
-          title: "Types of Data Structures",
-          id: "types",
+          title: "Arrays",
+          id: "arrays",
           content: [
-            "Data structures can be classified into two categories:"
-          ],
-          subsections: [
-            {
-              title: "Linear Data Structures",
-              content: ["Elements are arranged in a sequential manner. Examples include arrays, linked lists, stacks, and queues."]
-            },
-            {
-              title: "Non-Linear Data Structures",
-              content: ["Elements are arranged in a hierarchical manner. Examples include trees, graphs, and heaps."]
-            }
+            "An array is a collection of elements stored at contiguous memory locations. Each element can be accessed directly using its index. Arrays are one of the most fundamental data structures and provide O(1) access time to any element.",
+            "Example: In a student grade system, you might use an array to store test scores: [85, 92, 78, 95, 88]. The score at index 0 is 85, at index 1 is 92, and so on.",
+            "Advantages: Fast access to elements by index, memory efficiency, cache-friendly due to contiguous storage.",
+            "Disadvantages: Fixed size (in most languages), expensive insertions and deletions in the middle (requires shifting elements)."
           ]
         },
         {
-          title: "Common Data Structures",
-          id: "common",
+          title: "Stacks",
+          id: "stacks",
           content: [
-            "Fundamental data structures include arrays (fixed-size collections), linked lists (dynamically sized sequences), stacks (LIFO - Last In First Out), queues (FIFO - First In First Out), trees (hierarchical structures), graphs (networks of nodes), hash tables (key-value mappings), and heaps (priority queues)."
+            "A stack is a linear data structure that follows the Last In First Out (LIFO) principle. Think of it like a stack of plates - you can only add or remove plates from the top.",
+            "Core Operations: Push (add element to top), Pop (remove element from top), Peek (view top element without removing), isEmpty (check if stack is empty).",
+            "Real-world Example 1 - Browser History: When you visit websites, each page is pushed onto a stack. Clicking the back button pops the current page and returns to the previous one.",
+            "Real-world Example 2 - Undo Functionality: Text editors use stacks to implement undo. Each action is pushed onto a stack, and undo pops the last action.",
+            "Real-world Example 3 - Function Call Stack: Programming languages use stacks to manage function calls. When a function is called, its context is pushed onto the call stack. When it returns, the context is popped.",
+            "Code Example Concept: If you push(5), push(10), push(15) onto a stack, then pop() will return 15, the next pop() will return 10, and the next will return 5.",
+            "Time Complexity: All operations (push, pop, peek) are O(1) - constant time.",
+            "Common Applications: Expression evaluation (converting infix to postfix), backtracking algorithms, syntax parsing, and memory management."
           ]
         },
         {
-          title: "Abstract Data Types",
-          id: "adt",
+          title: "Queues",
+          id: "queues",
           content: [
-            "An abstract data type (ADT) is a mathematical model for data types, defined by its behavior from the point of view of a user of the data. An ADT is defined only by the operations that may be performed on it and not by its implementation. Common ADTs include lists, stacks, queues, sets, and maps."
+            "A queue is a linear data structure that follows the First In First Out (FIFO) principle. Think of it like a line at a ticket counter - the first person in line is served first.",
+            "Core Operations: Enqueue (add element to rear), Dequeue (remove element from front), Front (view front element), Rear (view rear element), isEmpty (check if queue is empty).",
+            "Real-world Example 1 - Print Queue: When multiple documents are sent to a printer, they are processed in the order received.",
+            "Real-world Example 2 - Customer Service: Call centers use queues to handle customer calls in the order they were received.",
+            "Real-world Example 3 - Task Scheduling: Operating systems use queues to schedule processes for CPU execution.",
+            "Types of Queues: Simple Queue (basic FIFO), Circular Queue (last position connects to first), Priority Queue (elements have priorities), Double-ended Queue (Deque - insertion and deletion from both ends).",
+            "Time Complexity: Enqueue and dequeue operations are O(1) when implemented with linked lists or circular arrays.",
+            "Common Applications: Breadth-first search in graphs, handling asynchronous requests, buffering, and resource scheduling."
           ]
         },
         {
-          title: "Time and Space Complexity",
-          id: "complexity",
+          title: "Linked Lists",
+          id: "linked-lists",
           content: [
-            "Each data structure has strengths and weaknesses in terms of time complexity for operations like insertion, deletion, and search, as well as space complexity. Choosing the right data structure depends on the specific requirements of the application."
+            "A linked list is a linear data structure where elements (nodes) are not stored at contiguous memory locations. Each node contains data and a reference (pointer) to the next node.",
+            "Types: Singly Linked List (each node points to next), Doubly Linked List (each node points to both next and previous), Circular Linked List (last node points to first).",
+            "Example: A music playlist where each song node contains the song data and a reference to the next song. You can easily add or remove songs without reorganizing the entire list.",
+            "Advantages: Dynamic size, efficient insertions/deletions (O(1) if position is known), no memory waste.",
+            "Disadvantages: No direct access to elements (must traverse from head), extra memory for pointers, not cache-friendly.",
+            "Common Operations: Insertion at beginning O(1), Insertion at end O(n), Deletion O(1) if node reference known, Search O(n).",
+            "Applications: Implementation of stacks and queues, managing memory allocation, representing polynomials, and undo functionality in applications."
+          ]
+        },
+        {
+          title: "Trees",
+          id: "trees",
+          content: [
+            "A tree is a hierarchical non-linear data structure consisting of nodes connected by edges. Each tree has a root node, and every node has zero or more child nodes.",
+            "Binary Tree: Each node has at most two children (left and right). Example: A family tree showing parent-child relationships.",
+            "Binary Search Tree (BST): A binary tree where left child < parent < right child. This property enables efficient searching. Example: A dictionary where words are stored in alphabetical order for quick lookup.",
+            "AVL Tree: A self-balancing BST where heights of left and right subtrees differ by at most one, ensuring O(log n) operations.",
+            "B-Trees: Used in databases and file systems for efficient disk access. They can have multiple children per node.",
+            "Heap: A complete binary tree where each parent is greater (max-heap) or smaller (min-heap) than its children. Used in priority queues and heap sort.",
+            "Real-world Example: File systems use tree structures where folders contain subfolders and files.",
+            "Time Complexity: BST search, insertion, deletion are O(log n) average case, O(n) worst case. Balanced trees guarantee O(log n).",
+            "Applications: File systems, database indexing, expression parsing, network routing algorithms, and decision-making processes."
+          ]
+        },
+        {
+          title: "Graphs",
+          id: "graphs",
+          content: [
+            "A graph is a non-linear data structure consisting of vertices (nodes) and edges connecting them. Graphs can represent complex relationships and networks.",
+            "Types: Directed Graph (edges have direction), Undirected Graph (edges are bidirectional), Weighted Graph (edges have weights/costs), Cyclic/Acyclic Graphs.",
+            "Representation Methods: Adjacency Matrix (2D array showing connections), Adjacency List (array of lists showing neighbors for each vertex).",
+            "Real-world Example 1 - Social Networks: People are vertices, friendships are edges. Facebook uses graphs to represent social connections.",
+            "Real-world Example 2 - Maps and Navigation: Cities are vertices, roads are weighted edges (weights represent distance or travel time). GPS systems use graphs for routing.",
+            "Real-world Example 3 - Web Pages: Pages are vertices, hyperlinks are directed edges. Search engines use graphs to index the web.",
+            "Common Algorithms: Breadth-First Search (BFS), Depth-First Search (DFS), Dijkstra's shortest path, Prim's and Kruskal's minimum spanning tree.",
+            "Applications: Social networks, recommendation systems, network topology, route planning, dependency resolution, and web crawling."
+          ]
+        },
+        {
+          title: "Hash Tables",
+          id: "hash-tables",
+          content: [
+            "A hash table (hash map) is a data structure that implements an associative array, mapping keys to values. It uses a hash function to compute an index into an array of buckets.",
+            "How It Works: A hash function takes a key and produces a hash code (integer). This hash code is converted to an array index where the value is stored.",
+            "Example: A phone book where names (keys) map to phone numbers (values). Instead of searching linearly, the hash function quickly finds the location.",
+            "Collision Handling: When two keys hash to the same index, collisions are resolved using chaining (linked list at each bucket) or open addressing (finding next available slot).",
+            "Time Complexity: Average case O(1) for insertion, deletion, and search. Worst case O(n) when many collisions occur.",
+            "Load Factor: Ratio of stored elements to table size. When it exceeds a threshold, the table is resized (rehashed) to maintain performance.",
+            "Applications: Database indexing, caching systems, symbol tables in compilers, removing duplicates, and implementing sets and dictionaries."
+          ]
+        },
+        {
+          title: "Heaps",
+          id: "heaps",
+          content: [
+            "A heap is a complete binary tree that satisfies the heap property: in a max-heap, each parent node is greater than or equal to its children; in a min-heap, each parent is less than or equal to its children.",
+            "Binary Heap: Usually implemented as an array. For element at index i: left child is at 2i+1, right child at 2i+2, parent at (i-1)/2.",
+            "Example: A priority queue in a hospital emergency room where patients are treated based on severity (priority) rather than arrival order.",
+            "Operations: Insert O(log n) - add element and bubble up, Extract-Max/Min O(log n) - remove root and bubble down, Peek O(1) - view root.",
+            "Heap Sort: An efficient O(n log n) sorting algorithm that builds a heap and repeatedly extracts the maximum element.",
+            "Priority Queue: Abstract data type implemented using heaps, where elements are served based on priority rather than insertion order.",
+            "Applications: Priority scheduling in operating systems, Dijkstra's shortest path algorithm, Huffman coding for data compression, and finding k largest/smallest elements."
+          ]
+        },
+        {
+          title: "Choosing the Right Data Structure",
+          id: "choosing",
+          content: [
+            "Selection Criteria: Consider time complexity of required operations, space constraints, whether you need ordered data, frequency of insertions vs. searches, and whether data size is known in advance.",
+            "Use Arrays when: You need fast random access, size is fixed or rarely changes, and memory efficiency is important.",
+            "Use Linked Lists when: You frequently insert/delete elements, size changes dynamically, and you don't need random access.",
+            "Use Stacks when: You need LIFO behavior (undo/redo, backtracking, expression evaluation).",
+            "Use Queues when: You need FIFO behavior (scheduling, breadth-first search, buffering).",
+            "Use Trees when: You need hierarchical organization, fast search in sorted data, or range queries.",
+            "Use Graphs when: You need to represent complex relationships or networks.",
+            "Use Hash Tables when: You need very fast lookups by key and order doesn't matter."
           ]
         }
       ]
